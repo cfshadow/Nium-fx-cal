@@ -163,7 +163,9 @@ function renderChart() {
   const isDaily=period>48, wide=window.innerWidth>768;
   const opts={
     series:[{name:"Rate",data:serData}],colors:["#7162CF"],
-    chart:{type:"line",height:wide?300:180,zoom:{enabled:false},toolbar:{show:false},background:"#F9F9FD",animations:{enabled:true,speed:350}},
+   //changed this below line from old js
+    chart:{type:"line",height:"100%",zoom:{enabled:false},toolbar:{show:false},background:"#F9F9FD",animations:{enabled:true,speed:350}},
+//    chart:{type:"line",height:wide?300:180,zoom:{enabled:false},toolbar:{show:false},background:"#F9F9FD",animations:{enabled:true,speed:350}},
     dataLabels:{enabled:false},stroke:{curve:"straight",width:2},markers:{size:0},
     grid:{borderColor:"#E4E4F0",strokeDashArray:3},
     yaxis:{min:minA-spread/6,max:maxA+spread/6,show:wide,labels:{formatter:v=>v.toPrecision(6)},tickAmount:wide?7:4},
